@@ -12,7 +12,7 @@ export const homestyle = StyleSheet.create({
   container: {
     flex: 1,
     // backgroundColor: colors.lightgrey,
-    backgroundColor: "#d7eaf9af",
+    backgroundColor: colors.white,
     justifyContent: "space-between",
   },
   hero: {
@@ -21,9 +21,11 @@ export const homestyle = StyleSheet.create({
   },
 
   heroImg: {
-    width: Dimensions.get("screen").width - 100,
+    position: "absolute",
+    zIndex: -1,
+    width: Dimensions.get("screen").width,
     objectFit: "cover",
-    height: Dimensions.get("screen").height - 200,
+    height: "100%",
   },
 
   heroText: {
@@ -45,13 +47,13 @@ export const homestyle = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#fff",
     padding: 5,
-
+    borderRadius: 10,
     alignItems: "center",
   },
   recommendationButtonText: {
-    fontWeight: "600",
-    fontSize: Dimensions.get("screen").fontScale * 16,
-    borderRadius: 10,
+    fontWeight: "300",
+    fontSize: Dimensions.get("screen").fontScale * 13,
+
     marginLeft: 10,
   },
 
@@ -99,7 +101,7 @@ export const homestyle = StyleSheet.create({
     width: 30,
   },
   locationButtonTextBold: {
-    fontWeight: "600",
+    fontWeight: "700",
     paddingVertical: 5,
     fontSize: Dimensions.get("screen").fontScale * 16,
   },
@@ -130,53 +132,8 @@ export const buttonStyle = StyleSheet.create({
   },
 });
 
-export const headerStyle = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    // backgroundColor: "#d7eaf9",
-    padding: 0,
-    borderBottomColor: "black",
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    width: "100%",
-    elevation: 0,
-    height: 100,
-  },
-});
-export const calendarStyle = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#ffffff",
 
-    justifyContent: "space-between",
-  },
-  headerContainer: {
-    paddingVertical: 10,
-  },
-  header: {
-    fontWeight: "700",
-    fontSize: 25,
 
-    padding: 6,
-  },
-  badgeContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: 20,
-  },
-  badge: {
-    backgroundColor: "#4460ef13",
-    padding: 5,
-
-    borderRadius: 10,
-  },
-  button: {
-    height: 90,
-    alignItems: "center",
-  },
-});
 
 export const locationStyle = StyleSheet.create({
   container: {
@@ -222,213 +179,45 @@ export const locationStyle = StyleSheet.create({
     gap: 20,
   },
 });
-export const carListStyle = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#d7eaf9af",
-  },
-  selectContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 5,
-  },
-  select: {
-    flexDirection: "row",
-    alignItems: "center",
 
-    width: (Dimensions.get("screen").width - 20) / 2,
-    height: 40,
-    borderRadius: 15,
-    justifyContent: "space-between",
 
-    padding: 10,
+// export const badgeStyle = StyleSheet.create({
+//   container: {
+//     flexDirection: "row",
+//     fontSize: 16,
+//   },
+//   text: {
+//     marginLeft: -1,
+//     textAlignVertical: "top",
+//     fontWeight: "700",
+//   },
+// });
 
-    backgroundColor: "#d7eaf9af",
-  },
 
-  info: {
-    backgroundColor: "#d6ead7",
-    width: Dimensions.get("screen").width - 20,
-    flexDirection: "row",
-    alignItems: "center",
-    borderRadius: 4,
-    padding: 10,
-    marginVertical: 10,
-  },
 
-  cardContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "gray",
 
-    height: "95%",
-    position: "relative",
-    padding: 10,
-    borderRadius: 10,
-  },
-  tag: {
-    position: "absolute",
-    top: 5,
-    left: 5,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  tagText: {
-    color: "#787878",
-  },
-  badgeContainer: {
-    flexDirection: "row",
-
-    gap: 6,
-    alignItems: "center",
-  },
-  textBold: {
-    fontWeight: "bold",
-  },
-  carInfo: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  footer: {
-    backgroundColor: "#d7eaf9af",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: 10,
-    marginTop: 10,
-    borderRadius: 10,
-  },
-  footerText1: {
-    fontSize: 18,
-  },
-  footerText2: {
-    fontSize: 14,
-  },
-});
-
-export const badgeStyle = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    fontSize: 16,
-  },
-  text: {
-    marginLeft: -1,
-    textAlignVertical: "top",
-    fontWeight: "700",
-  },
-});
-
-export const carDetailStyle = StyleSheet.create({
-  info: {
-    alignItems: "center",
-  },
-  infoDetails1: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: 10,
-  },
-  infoProperty1: {
-    padding: 10,
-  },
-});
-
-export const reservation = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-  },
-  reserveDetails: {},
-  reservationContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-
-    justifyContent: "space-between",
-  },
-  title: {
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  reserve: {
-    paddingVertical: 15,
-    paddingLeft: 10,
-    gap: 10,
-    flex: 1,
-    borderBottomColor: "#cccccc",
-    borderBottomWidth: 1,
-  },
-  subtitle: {
-    fontSize: 12.5,
-  },
-  titlegroup: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: 10,
-  },
-  due: {
-    paddingVertical: 15,
-    gap: 10,
-    borderBottomColor: "#cccccc",
-    borderBottomWidth: 1,
-  },
-
-  requirement: {
-    paddingVertical: 15,
-    gap: 15,
-
-    borderBottomColor: "#cccccc",
-    borderBottomWidth: 1,
-  },
-  box: {
-    gap: 5,
-  },
-  terms: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-    paddingVertical: 20,
-  },
-  link: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  linkText: {
-    color: "royalblue",
-    textDecorationColor: "royalblue",
-    textDecorationLine: "underline",
-    fontWeight: "bold",
-  },
-  card: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-  },
-  carddetails: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingVertical: 15,
-  },
-});
 
 export const hourlystyle = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.lightgrey,
+    // backgroundColor: colors.white,
+    // justifyContent: "space-between",
+   
+  },
   section: {
     height: 500,
 
     padding: 10,
+    paddingBottom: 20,
     backgroundColor: "#fff",
-    // flex: 1,
-    height: Dimensions.get("screen").height - 500,
-  },
-  container: {
     flex: 1,
+    // height: Dimensions.get("screen").height - 300,
   },
+ 
   hero: {
     padding: 10,
-    height: 400,
+    height: 350,
     // height: Dimensions.get("screen").height / 3,
   },
 

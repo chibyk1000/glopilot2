@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { SvgUri } from "react-native-svg";
+
 import { colors, homestyle, hourlystyle } from "../../styles/style";
 import {
   MaterialCommunityIcons,
@@ -10,13 +10,13 @@ import {
   AntDesign,
 } from "@expo/vector-icons";
 import Button from "../components/Button";
-import Img from "../../assets/car-pana.svg";
+
 
 const Hourly = ({ navigation }) => {
   const handNavigate = (name) => navigation.navigate(name);
 
   return (
-    <SafeAreaView style={homestyle.container} edges={["right", "top", "left"]}>
+    <SafeAreaView style={hourlystyle.container} edges={["right", "top", "left"]}>
       <View style={hourlystyle.hero}>
         <View style={homestyle.recommendation}>
           <TouchableOpacity
@@ -35,12 +35,12 @@ const Hourly = ({ navigation }) => {
             <Text style={{ fontSize: 16 }}>Upcoming Trips</Text>
           </TouchableOpacity>
         </View>
-
-        <Img />
+        <Image source={require('../../assets/red.png')} style={{width:'100%', height:"100%", objectFit:"contain"}} />
+     
       </View>
 
       <View style={hourlystyle.section}>
-        <Text style={hourlystyle.sectionTitleText}>Hourly Forecast</Text>
+        <Text style={hourlystyle.sectionTitleText}>Glopilot Hourly</Text>
 
         <View style={hourlystyle.listContainer}>
           <View style={hourlystyle.listItem}>

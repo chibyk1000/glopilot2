@@ -57,7 +57,16 @@ const SelectTime = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={homestyle.container}>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: colors.lightgrey,
+        // backgroundColor: colors.white,
+        justifyContent: "space-between",
+        paddingBottom: 40
+      }}
+      edges={["right", "top", "left"]}
+    >
       <TouchableOpacity
         style={locationStyle.listItem}
         onPress={() => navigation.goBack()}
@@ -92,7 +101,7 @@ const SelectTime = ({ navigation }) => {
         >
           <TouchableOpacity
             style={{
-              backgroundColor: "#d7eaf9af",
+              backgroundColor:colors.lightgrey,
               justifyContent: "center",
               alignItems: "center",
               borderRadius: 50,
@@ -120,7 +129,7 @@ const SelectTime = ({ navigation }) => {
           </Text>
           <TouchableOpacity
             style={{
-              backgroundColor: "#d7eaf9af",
+              backgroundColor: colors.lightgrey,
               justifyContent: "center",
               alignItems: "center",
               borderRadius: 50,
@@ -169,7 +178,7 @@ const SelectTime = ({ navigation }) => {
             style={{
               flexDirection: "row",
               alignItems: "center",
-              backgroundColor: "#d7eaf9af",
+              backgroundColor: colors.grey+'1a',
               width: 120,
               borderRadius: 50,
               padding: 5,
@@ -206,7 +215,7 @@ const SelectTime = ({ navigation }) => {
             <Text>Starting at</Text>
             <View>
               <Text style={homestyle.locationButtonTextBold}>$110.76</Text>
-              <Text style={{ color: "#969696" }}>$55.38/hour</Text>
+              <Text style={{ color: colors.grey }}>$55.38/hour</Text>
             </View>
           </View>
           <Button
